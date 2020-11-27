@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:hu.czompisoftware.customcontrols">
+    
+    <SolidColorBrush x:Key="ColorPrimary" Color="#007BFF" />
+    <SolidColorBrush x:Key="ColorPrimaryDarker" Color="#0069D9" />
+
+    <SolidColorBrush x:Key="ColorSecondary" Color="#6C757D" />
+    <SolidColorBrush x:Key="ColorSecondaryDarker" Color="#5A6268" />
+
+    <SolidColorBrush x:Key="ColorSuccess" Color="#28A745" />
+    <SolidColorBrush x:Key="ColorSuccessDarker" Color="#218838" />
+
+    <SolidColorBrush x:Key="ColorDanger" Color="#DC3545" />
+    <SolidColorBrush x:Key="ColorDangerDarker" Color="#C82333" />
+
+    <SolidColorBrush x:Key="ColorWarning" Color="#FFC107" />
+    <SolidColorBrush x:Key="ColorWarningDarker" Color="#E0A800" />
+
+    <SolidColorBrush x:Key="ColorInfo" Color="#17A2B8" />
+    <SolidColorBrush x:Key="ColorInfoDarker" Color="#138496" />
+
+    <SolidColorBrush x:Key="ColorLight" Color="#F8F9FA" />
+    <SolidColorBrush x:Key="ColorLightDarker" Color="#E2E6EA" />
+
+    <SolidColorBrush x:Key="ColorDark" Color="#343A40" />
+    <SolidColorBrush x:Key="ColorDarkDarker" Color="#23272B" />
+
+    <SolidColorBrush x:Key="ColorLightGray" Color="#EAEAEA" />
+    <SolidColorBrush x:Key="ColorLightGrayDarker" Color="#C5C5C5" />
+    
+</ResourceDictionary>
