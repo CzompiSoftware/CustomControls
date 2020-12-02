@@ -12,11 +12,6 @@ namespace hu.czompisoftware.customcontrols.CuttingCorners
             DefaultStyleKeyProperty.OverrideMetadata(typeof(TextBox), new FrameworkPropertyMetadata(typeof(TextBox)));
             //Console.WriteLine(ColorModifier("#3F6D2A", 40));
         }
-        public static String ColorModifier(String color, int amt)
-        {
-            var col = int.Parse(color.TrimStart('#'), System.Globalization.NumberStyles.HexNumber);
-            return String.Format("#{0:X6}", (((col & 0x0000FF) + amt) | ((((col >> 8) & 0x00FF) + amt) << 8) | (((col >> 16) + amt) << 16)));
-        }
 
         #region DogEar
         public double DogEar
