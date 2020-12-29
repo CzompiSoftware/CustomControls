@@ -11,7 +11,8 @@
     <RepositoryUrl>https://github.com/CzompiSoftware/CustomControls</RepositoryUrl>
     <Copyright>Czompi Software 2020</Copyright>
     <Product>Czompi's CustomControls</Product>
-    <Version>1.3.5.1</Version>
+    <Version>1.3.5.3</Version>
+    <LangVersion>9.0</LangVersion>
     <PackageReleaseNotes>1.1.0
 - Added label
 1.1.1
@@ -92,7 +93,12 @@
 - Fixed TextBox value handling
 * PLANNED: Rewrite the way we handle coloring.
 1.3.5.1
-- Mirrored DogEar for `Button`s and fixed ScrollViewer's Centering content issue.</PackageReleaseNotes>
+- Mirrored DogEar for `Button`s and fixed ScrollViewer's Centering content issue.
+1.3.5.2
+- The previous version was a mistake, I found the only control (ScrollViewer) that used a different clip style than the other controls. I fixed it now.
+- Fixed most of the items (for ex ListBox needs to be fixed or removed[?]) and added them to CustomControls.Sample project
+1.3.5.3
+- *HOTFIX:* Fixed a missing Padding pass.</PackageReleaseNotes>
     <Description>Custom WPF control objects.</Description>
   </PropertyGroup>
 

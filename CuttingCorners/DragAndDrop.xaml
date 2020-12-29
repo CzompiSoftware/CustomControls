@@ -2,9 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:hu.czompisoftware.customcontrols.CuttingCorners">
 
-    <!--#region LightGray -->
-    <Style TargetType="{x:Type local:DragAndDrop}" x:Key="DragAndDropLightGray">
-        <Setter Property="Background" Value="#EAEAEA"/>
+    <!--#region DragAndDropStyle -->
+    <Style TargetType="{x:Type local:DragAndDrop}" x:Key="DragAndDropStyle">
         <Setter Property="DogEar" Value="8"/>
         <Setter Property="AllowDrop" Value="True"/>
         <Setter Property="Template">
@@ -12,6 +11,7 @@
                 <ControlTemplate TargetType="{x:Type local:DragAndDrop}">
                     <Border CornerRadius="0"
                             BorderThickness="0"
+                            Padding="{TemplateBinding Padding}"
                             Background="{TemplateBinding Background}">
                         <ContentPresenter Content="{TemplateBinding Content}"/>
                     </Border>
@@ -26,6 +26,73 @@
     </Style>
     <!--#endregion-->
 
-    <!--<Style TargetType="{x:Type local:DragAndDrop}" x:Key="Default" BasedOn="{StaticResource ResourceKey=Primary}"/>-->
+    <!--#region Colors-->
+
+    <!--#region Primary -->
+    <Style TargetType="{x:Type local:DragAndDrop}" x:Key="DragAndDropPrimary" BasedOn="{StaticResource ResourceKey=DragAndDropStyle}">
+        <Setter Property="Background" Value="#007BFF"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Secondary -->
+    <Style TargetType="{x:Type local:DragAndDrop}" x:Key="DragAndDropSecondary" BasedOn="{StaticResource ResourceKey=DragAndDropStyle}">
+        <Setter Property="Background" Value="#6C757D"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Success -->
+    <Style TargetType="{x:Type local:DragAndDrop}" x:Key="DragAndDropSuccess" BasedOn="{StaticResource ResourceKey=DragAndDropStyle}">
+        <Setter Property="Background" Value="#28A745"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Danger -->
+    <Style TargetType="{x:Type local:DragAndDrop}" x:Key="DragAndDropDanger" BasedOn="{StaticResource ResourceKey=DragAndDropStyle}">
+        <Setter Property="Background" Value="#DC3545"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Warning -->
+    <Style TargetType="{x:Type local:DragAndDrop}" x:Key="DragAndDropWarning" BasedOn="{StaticResource ResourceKey=DragAndDropStyle}">
+        <Setter Property="Background" Value="#FFC107"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Info -->
+    <Style TargetType="{x:Type local:DragAndDrop}" x:Key="DragAndDropInfo" BasedOn="{StaticResource ResourceKey=DragAndDropStyle}">
+        <Setter Property="Background" Value="#17A2B8"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Light -->
+    <Style TargetType="{x:Type local:DragAndDrop}" x:Key="DragAndDropLight" BasedOn="{StaticResource ResourceKey=DragAndDropStyle}">
+        <Setter Property="Background" Value="#F8F9FA"/>
+        <Setter Property="Foreground" Value="#212529"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Dark -->
+    <Style TargetType="{x:Type local:DragAndDrop}" x:Key="DragAndDropDark" BasedOn="{StaticResource ResourceKey=DragAndDropStyle}">
+        <Setter Property="Background" Value="#343A40"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region LightGray -->
+    <Style TargetType="{x:Type local:DragAndDrop}" x:Key="DragAndDropLightGray" BasedOn="{StaticResource ResourceKey=DragAndDropStyle}">
+        <Setter Property="Background" Value="#EAEAEA"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#endregion-->
+
+    <Style TargetType="{x:Type local:DragAndDrop}" x:Key="DragAndDropDefault" BasedOn="{StaticResource ResourceKey=DragAndDropPrimary}"/>
     <Style TargetType="{x:Type local:DragAndDrop}" BasedOn="{StaticResource ResourceKey=DragAndDropLightGray}"/>
 </ResourceDictionary>
