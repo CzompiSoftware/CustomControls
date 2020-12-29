@@ -399,7 +399,7 @@
                                 <Frame 
                                     Width="12" Height="12"
                                     x:Name="CheckMark"
-                                    Source="pack://application:,,,/CustomControls;component/Resources/check-solid_white.xaml"/>
+                                    Source="pack://application:,,,/CustomControls;component/Resources/check-solid_black.xaml"/>
                                 <Border.Clip>
                                     <PathGeometry>
                                         <PathFigure StartPoint="0,0">
@@ -423,7 +423,7 @@
                             <Setter TargetName="CheckMark" Property="Visibility" Value="Collapsed"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="{x:Null}">
-                            <Setter TargetName="CheckMark" Property="Source" Value="pack://application:,,,/CustomControls;component/Resources/check-solid_white.xaml" />
+                            <Setter TargetName="CheckMark" Property="Source" Value="pack://application:,,,/CustomControls;component/Resources/check-solid_black.xaml" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
                             <Setter TargetName="Border" Property="Background" Value="{StaticResource CheckBoxColorLightDarker}" />

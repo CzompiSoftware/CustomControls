@@ -16,7 +16,7 @@
                     <Border CornerRadius="0"
                             BorderThickness="0"
                             Background="{TemplateBinding Background}">
-                        <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" Content="{TemplateBinding Content}"
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}"
                                           Margin="{TemplateBinding Padding}" />
                     </Border>
                 </ControlTemplate>

@@ -228,7 +228,7 @@
     <Style TargetType="{x:Type local:Button}" x:Key="ButtonLight">
         <Setter Property="Padding" Value="8,4,8,4"/>
         <Setter Property="Background" Value="#F8F9FA"/>
-        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Foreground" Value="#212529"/>
         <Setter Property="DogEar" Value="8"/>
         <Setter Property="FontFamily" Value="pack://application:,,,/CustomControls;component/Resources/Fonts/#Comfortaa"/>
         <Setter Property="Template">
