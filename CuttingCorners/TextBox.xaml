@@ -29,7 +29,9 @@
         </Style.Triggers>
     </Style>
     <!--#endregion-->
-
+    
+    <!--#region Colors--> 
+    
     <!--#region Primary -->
     <Style TargetType="{x:Type local:TextBox}" x:Key="TextBoxPrimary" BasedOn="{StaticResource ResourceKey=TextBoxStyle}">
         <Setter Property="Background" Value="#007BFF"/>
@@ -37,6 +39,7 @@
     </Style>
     <!--#endregion-->
 
+    <!--#region Secondary -->
     <Style TargetType="{x:Type local:TextBox}" x:Key="TextBoxSecondary" BasedOn="{StaticResource ResourceKey=TextBoxStyle}">
         <Setter Property="Background" Value="#6C757D"/>
         <Setter Property="Foreground" Value="White"/>
@@ -90,6 +93,8 @@
         <Setter Property="Background" Value="#EAEAEA"/>
         <Setter Property="Foreground" Value="Black"/>
     </Style>
+    <!--#endregion-->
+    
     <!--#endregion-->
 
     <Style TargetType="{x:Type local:TextBox}" x:Key="TextBoxDefault" BasedOn="{StaticResource ResourceKey=TextBoxPrimary}"/>
