@@ -12,12 +12,6 @@ namespace hu.czompisoftware.customcontrols.CuttingCorners
         static ComboBox()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ComboBox), new FrameworkPropertyMetadata(typeof(ComboBox)));
-            //Console.WriteLine(ColorModifier("#3F6D2A", 40));
-        }
-        public static String ColorModifier(String color, int amt)
-        {
-            var col = int.Parse(color.TrimStart('#'), System.Globalization.NumberStyles.HexNumber);
-            return String.Format("#{0:X6}", (((col & 0x0000FF) + amt) | ((((col >> 8) & 0x00FF) + amt) << 8) | (((col >> 16) + amt) << 16)));
         }
 
         #region DogEar
@@ -74,6 +68,19 @@ namespace hu.czompisoftware.customcontrols.CuttingCorners
         }
         #endregion
 
+        #region HoverBackground property
+        private static readonly DependencyProperty HoverBackgroundProperty =
+            DependencyProperty.Register(
+                "HoverBackground", typeof(Brush), typeof(ComboBox),
+                new PropertyMetadata(default(Brush)));
+
+        public Brush? HoverBackground
+        {
+            get => (Brush?)GetValue(HoverBackgroundProperty);
+            set => SetValue(HoverBackgroundProperty, value);
+        }
+        #endregion
+
         public ComboBox()
         {
             this.SizeChanged += new SizeChangedEventHandler(ComboBox_SizeChanged);
@@ -81,8 +88,10 @@ namespace hu.czompisoftware.customcontrols.CuttingCorners
 
         void ComboBox_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            var clip = new PathGeometry();
-            clip.Figures = new PathFigureCollection();
+            PathGeometry clip = new()
+            {
+                Figures = new PathFigureCollection()
+            };
 
             #region IsMirroredDogEar
             if (IsMirroredDogEar)

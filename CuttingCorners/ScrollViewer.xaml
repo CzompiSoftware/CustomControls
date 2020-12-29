@@ -2,11 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:hu.czompisoftware.customcontrols.CuttingCorners">
 
-    <!--#region LightGray -->
-    <Style TargetType="{x:Type local:ScrollViewer}" x:Key="ScrollViewerLightGray">
+    <!--#region ScrollViewerStyle -->
+    <Style TargetType="{x:Type local:ScrollViewer}" x:Key="ScrollViewerStyle">
         <Setter Property="Padding" Value="8,4,8,4"/>
-        <Setter Property="Background" Value="#F7F7F7"/>
-        <Setter Property="Foreground" Value="Black"/>
         <Setter Property="DogEar" Value="8"/>
         <Setter Property="IsMirroredDogEar" Value="True"/>
         <Setter Property="FontFamily" Value="pack://application:,,,/CustomControls;component/Resources/Fonts/#Comfortaa"/>
@@ -41,5 +39,73 @@
     </Style>
     <!--#endregion-->
 
+    <!--#region Colors-->
+
+    <!--#region Primary -->
+    <Style TargetType="{x:Type local:ScrollViewer}" x:Key="ScrollViewerPrimary" BasedOn="{StaticResource ResourceKey=ScrollViewerStyle}">
+        <Setter Property="Background" Value="#007BFF"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Secondary -->
+    <Style TargetType="{x:Type local:ScrollViewer}" x:Key="ScrollViewerSecondary" BasedOn="{StaticResource ResourceKey=ScrollViewerStyle}">
+        <Setter Property="Background" Value="#6C757D"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Success -->
+    <Style TargetType="{x:Type local:ScrollViewer}" x:Key="ScrollViewerSuccess" BasedOn="{StaticResource ResourceKey=ScrollViewerStyle}">
+        <Setter Property="Background" Value="#28A745"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Danger -->
+    <Style TargetType="{x:Type local:ScrollViewer}" x:Key="ScrollViewerDanger" BasedOn="{StaticResource ResourceKey=ScrollViewerStyle}">
+        <Setter Property="Background" Value="#DC3545"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Warning -->
+    <Style TargetType="{x:Type local:ScrollViewer}" x:Key="ScrollViewerWarning" BasedOn="{StaticResource ResourceKey=ScrollViewerStyle}">
+        <Setter Property="Background" Value="#FFC107"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Info -->
+    <Style TargetType="{x:Type local:ScrollViewer}" x:Key="ScrollViewerInfo" BasedOn="{StaticResource ResourceKey=ScrollViewerStyle}">
+        <Setter Property="Background" Value="#17A2B8"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Light -->
+    <Style TargetType="{x:Type local:ScrollViewer}" x:Key="ScrollViewerLight" BasedOn="{StaticResource ResourceKey=ScrollViewerStyle}">
+        <Setter Property="Background" Value="#F8F9FA"/>
+        <Setter Property="Foreground" Value="#212529"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Dark -->
+    <Style TargetType="{x:Type local:ScrollViewer}" x:Key="ScrollViewerDark" BasedOn="{StaticResource ResourceKey=ScrollViewerStyle}">
+        <Setter Property="Background" Value="#343A40"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region LightGray -->
+    <Style TargetType="{x:Type local:ScrollViewer}" x:Key="ScrollViewerLightGray" BasedOn="{StaticResource ResourceKey=ScrollViewerStyle}">
+        <Setter Property="Background" Value="#EAEAEA"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#endregion-->
+
+    <Style TargetType="{x:Type local:ScrollViewer}" x:Key="ScrollViewerDefault" BasedOn="{StaticResource ResourceKey=ScrollViewerPrimary}"/>
     <Style TargetType="{x:Type local:ScrollViewer}" BasedOn="{StaticResource ResourceKey=ScrollViewerLightGray}"/>
 </ResourceDictionary>

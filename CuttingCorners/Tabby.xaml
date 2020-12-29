@@ -1,9 +1,11 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:hu.czompisoftware.customcontrols.CuttingCorners">
-    <Style TargetType="{x:Type local:Tabby}">
-        <Setter Property="Padding"
-            Value="5" />
+    
+    <!--#region TabbyStyle -->
+    <Style TargetType="{x:Type local:Tabby}" x:Key="TabbyStyle" >
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="MergeSide" Value="Left"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:Tabby}">
@@ -12,21 +14,18 @@
                             <RowDefinition Height="auto" />
                             <RowDefinition Height="auto" />
                         </Grid.RowDefinitions>
-                        <Border CornerRadius="3,0,0,0"
-                            BorderBrush="Black"
-                            BorderThickness="1"
-                            Background="Black">
-                            <ContentPresenter Content="{TemplateBinding Header}"
-                                          Margin="{TemplateBinding Padding}" />
+                        <Border BorderThickness="1"
+                            BorderBrush="{TemplateBinding Background}"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter Content="{TemplateBinding Header}" Margin="{TemplateBinding Padding}" />
                         </Border>
-                        <Border CornerRadius="0,0,3,3"
-                            BorderBrush="Black"
+                        <Border BorderBrush="{TemplateBinding Background}"
                             BorderThickness="1"
                             Background="White"
+                            
                             Grid.Row="1">
 
-                            <ContentPresenter Content="{TemplateBinding Content}"
-                                          Margin="{TemplateBinding Padding}" />
+                            <ContentPresenter TextBlock.Foreground="Black" Content="{TemplateBinding Content}" Margin="{TemplateBinding Padding}" />
                         </Border>
                     </Grid>
 
@@ -34,4 +33,75 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!--#endregion-->
+
+    <!--#region Colors-->
+
+    <!--#region Primary -->
+    <Style TargetType="{x:Type local:Tabby}" x:Key="TabbyPrimary" BasedOn="{StaticResource ResourceKey=TabbyStyle}">
+        <Setter Property="Background" Value="#007BFF"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Secondary -->
+    <Style TargetType="{x:Type local:Tabby}" x:Key="TabbySecondary" BasedOn="{StaticResource ResourceKey=TabbyStyle}">
+        <Setter Property="Background" Value="#6C757D"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Success -->
+    <Style TargetType="{x:Type local:Tabby}" x:Key="TabbySuccess" BasedOn="{StaticResource ResourceKey=TabbyStyle}">
+        <Setter Property="Background" Value="#28A745"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Danger -->
+    <Style TargetType="{x:Type local:Tabby}" x:Key="TabbyDanger" BasedOn="{StaticResource ResourceKey=TabbyStyle}">
+        <Setter Property="Background" Value="#DC3545"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Warning -->
+    <Style TargetType="{x:Type local:Tabby}" x:Key="TabbyWarning" BasedOn="{StaticResource ResourceKey=TabbyStyle}">
+        <Setter Property="Background" Value="#FFC107"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Info -->
+    <Style TargetType="{x:Type local:Tabby}" x:Key="TabbyInfo" BasedOn="{StaticResource ResourceKey=TabbyStyle}">
+        <Setter Property="Background" Value="#17A2B8"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Light -->
+    <Style TargetType="{x:Type local:Tabby}" x:Key="TabbyLight" BasedOn="{StaticResource ResourceKey=TabbyStyle}">
+        <Setter Property="Background" Value="#F8F9FA"/>
+        <Setter Property="Foreground" Value="#212529"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Dark -->
+    <Style TargetType="{x:Type local:Tabby}" x:Key="TabbyDark" BasedOn="{StaticResource ResourceKey=TabbyStyle}">
+        <Setter Property="Background" Value="#343A40"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region LightGray -->
+    <Style TargetType="{x:Type local:Tabby}" x:Key="TabbyLightGray" BasedOn="{StaticResource ResourceKey=TabbyStyle}">
+        <Setter Property="Background" Value="#EAEAEA"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+    <!--#endregion-->
+
+    <!--#endregion-->
+
+    <Style TargetType="{x:Type local:Tabby}" x:Key="TabbyDefault" BasedOn="{StaticResource ResourceKey=TabbyPrimary}"/>
+    <Style TargetType="{x:Type local:Tabby}" BasedOn="{StaticResource ResourceKey=TabbyLightGray}"/>
 </ResourceDictionary>
